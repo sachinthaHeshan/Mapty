@@ -30,7 +30,7 @@ if(navigator.geolocation){
             .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
           .openPopup();
 
-         },
+         }, 
         function(){
             alert('Could not get your position!!!');
             console.log('Could not get your position!!!')
