@@ -16,7 +16,7 @@ _setDesciption(){
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
   this.desciption = `${this.type[0].toUpperCase()}${this.type.slice(1)} on ${
-    month[this.date.getDate()]
+    months[this.date.getDate()]
   } ${this.date.getDate()}`;
 }
 
@@ -139,7 +139,7 @@ class App{
 
     _newworkout(e){
       const validInputs =(...inputs) =>
-      input.every(inp => Number.isFinite(inp));
+      inputs.every(inp => Number.isFinite(inp));
       const allPositive = (...inputs) => inputs.every(inp => inp > 0);
 
       e.preventDefault();
@@ -249,7 +249,7 @@ class App{
       </li>
       `;
 
-      form.insertAdjacentElement('afterend',html);
+      form.insertAdjacentHTML('afterend',html);
 
     }
 
